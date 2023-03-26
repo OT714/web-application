@@ -17,7 +17,7 @@ pipeline{
         sh "mvn clean package"
       }
     }
-    /*
+    
     stage('4CodeQuality'){
       steps{
         sh "echo 'Perfoming CodeQualityAnalysis' "
@@ -29,6 +29,7 @@ pipeline{
         sh "mvn deploy"
       }
     } 
+    /*
     stage('8deploy2prod'){
       steps{
         deploy adapters: [tomcat8(credentialsId: 'tomcat-credentials', path: '', url: 'http://35.170.249.131:8080/')], contextPath: null, war: 'target/*war'
