@@ -23,19 +23,19 @@ pipeline{
         sh "echo 'Perfoming CodeQualityAnalysis' "
         sh "mvn sonar:sonar"
       }
-    }*/
+    }
     stage('5uploadNexus'){
       steps{
         sh "mvn deploy"
       }
     } 
-    /*
+ 
     stage('8deploy2prod'){
       steps{
         deploy adapters: [tomcat8(credentialsId: 'tomcat-credentials', path: '', url: 'http://35.170.249.131:8080/')], contextPath: null, war: 'target/*war'
       }
     }
-}
+}   */
   post{
     always{
       emailext body: '''Hey guys
@@ -62,6 +62,6 @@ Landmark
 +1 437 215 2483''', recipientProviders: [buildUser(), developers()], subject: 'success', to: 'paypal-team@gmail.com'
     }
   } 
-  */
+
 }
 }
