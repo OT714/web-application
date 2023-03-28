@@ -10,6 +10,7 @@ pipeline{
         git branch: 'main', credentialsId: 'git-cred', url: 'https://github.com/OT714/web-application.git'
       }
     }
+    
     stage('3Test+Build'){
       steps{
         sh "echo 'running JUnit-test-cases' "
@@ -17,6 +18,10 @@ pipeline{
         sh "mvn clean package"
       }
     }
+  }
+}
+  
+
    /* 
     stage('4CodeQuality'){
       steps{
@@ -63,5 +68,5 @@ Landmark
     }
   } 
 
+} 
 } */
-}
