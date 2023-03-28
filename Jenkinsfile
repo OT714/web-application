@@ -35,7 +35,7 @@ pipeline{
         deploy adapters: [tomcat8(credentialsId: 'tomcat-credentials', path: '', url: 'http://35.170.249.131:8080/')], contextPath: null, war: 'target/*war'
       }
     }
-}   */
+  */
   post{
     always{
       emailext body: '''Hey guys
@@ -63,5 +63,6 @@ Landmark
     }
   } 
 
-}
+    }
+  }
 }
