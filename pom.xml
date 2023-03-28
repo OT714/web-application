@@ -95,13 +95,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>DevOps-Pro Technologies Releases Nexus Repository</name>
-	      <url>http://172.31.25.21:8081/repository/f-webapp-release/</url>
+	      <url>http://localhost:8081/repository/devops-pro-webapp-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>DevOps-Pro Technologies Snapshot Nexus Repository </name>
-	      <url>http://172.31.25.21:8081/repository/f-webapp-snapshot/</url>
+	      <url>http://localhost:8081/repository/devops-pro-webapp-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
